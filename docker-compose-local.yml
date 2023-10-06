@@ -14,6 +14,16 @@ services:
       - db-data:/var/lib/postgresql/data/
     ports:
       - '5432:5432'
+  # web:
+  #   build:
+  #     context: .
+  #   environment:
+  #     - DB_HOST=db
+  #   ports:
+  #     - 3000:3000
+  #   depends_on:
+  #     - db
+  #     - redis
   # sidekiq:
   #   depends_on:
   #     - 'db'

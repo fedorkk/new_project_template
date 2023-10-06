@@ -20,7 +20,7 @@ yarn:
 	yarn add chart.js
 
 env:
-  source ./.env.development
+	source ./.env.development
 
 db:
 	docker-compose -f docker-compose-local.yml up -d
@@ -38,4 +38,4 @@ stop:
 	docker-compose -f docker-compose-local.yml down
 
 front:
-  bundle exec ./bin/webpack-dev-server
+	bundle exec ./bin/webpack-dev-server
