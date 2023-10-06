@@ -23,13 +23,16 @@ env:
 	source ./.env.development
 
 db:
-	docker-compose -f docker-compose-local.yml up -d
+	docker-compose -f docker-compose-local.yml up -d db redis
 
 console:
 	bundle exec rails c
 
 server:
 	bundle exec rails s
+
+docker_server:
+	docker-compose -f docker-compose-local.yml up -d web
 
 test:
 	bundle exec rspec
