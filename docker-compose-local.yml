@@ -1,0 +1,30 @@
+# docker-compose-local.yml
+---
+version: "3.9"
+services:
+  redis:
+    image: 'redis:alpine'
+    ports:
+      - '6379:6379'
+  db:
+    image: 'postgres'
+    env_file:
+      - .env.development
+    volumes:
+      - db-data:/var/lib/postgresql/data/
+    ports:
+      - '5432:5432'
+  # sidekiq:
+  #   depends_on:
+  #     - 'db'
+  #     - 'redis'
+  #   build: .
+  #   command: bundle exec sidekiq
+  #   volumes:
+  #     - '.:/project'
+  #     - '/project/tmp' # don't mount tmp directory
+  #   environment:
+  #     - REDIS_URL_SIDEKIQ=redis://redis:6379/1
+
+volumes:
+  db-data:
