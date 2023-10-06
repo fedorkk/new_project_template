@@ -8,7 +8,7 @@ Unfortunately, Make can't save ENV variables for the parent process (your shell)
 
 1. Fetch
 2. Creaate rails project
-3. Copy files to the project folder
+3. Copy files to the project folder (`database.yml.example` should change `config/database.yml`)
 4. Adjust settings
 5. Use
 
