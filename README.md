@@ -2,7 +2,7 @@
 
 This is a small template that I use for creating new Ruby projects. It helps setting up database, redis and sidekiq in Docker using docker-compose. 
 Make is used as an aliases list for the project. For example `make dev` calls related tasks `env` that exports ENV variables for further tasks and `db` that calls `docker-compose` with a specific file. You can add new tasks or remove not required.
-Unfortunately, Make can't save ENV variables for the parent process (your shell), so the `source .env.development` call is required to have the same variables in your own shell. Another way is using [https://github.com/bkeepers/dotenv](dotenv gem) or any autoenv plugin for your shell.
+Unfortunately, Make can't save ENV variables for the parent process (your shell), so the `source .env.development` call is required to have the same variables in your own shell. Another way is using [dotenv gem](https://github.com/bkeepers/dotenv) or any autoenv plugin for your shell.
 
 ## Setup
 
